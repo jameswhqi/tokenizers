@@ -10,7 +10,7 @@
 
       overlay = final: prev: rec {
         tokenizersPackages = prev.callPackage ./. { naersk = naersk.lib."${final.system}"; };
-        tokenizers_haskell = tokenizersPackages.tokenizers-haskell;
+        tokenizers-haskell = tokenizersPackages.tokenizers-haskell;
       };
 
     } // (utils.lib.eachSystem ["x86_64-darwin" "x86_64-linux"] (system:

@@ -14,7 +14,7 @@
         tokenizers_haskell = tokenizersPackages.tokenizers-haskell; # for backwards-compatibility
       };
 
-    } // (utils.lib.eachSystem ["x86_64-darwin" "x86_64-linux"] (system:
+    } // (utils.lib.eachSystem ["x86_64-darwin" "x86_64-linux" "aarch64-darwin"] (system:
       let
         pkgs = import nixpkgs { inherit system; overlays = [ naersk.overlay ]; };
       in {
